@@ -1,0 +1,19 @@
+doctype html
+html
+
+if list
+  <H1>Files in chosen directory:</H1>
+  table(style='width:auto', border='1')
+    tr
+      th Full path
+      th Filename
+      th File size
+      th File type
+      th Created Date
+    tbody
+      each chunk in list
+        tr
+          each val in chunk
+            td= val
+else
+  H1 Please enter a name of the directory after the url. (http://localhost:3000/directory)
